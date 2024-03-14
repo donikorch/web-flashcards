@@ -11,14 +11,12 @@ module.exports = function Navigation({ user, score }) {
         <Container>
           <Navbar.Brand href='/'>Quiz</Navbar.Brand>
           <Navbar.Toggle />
-          <Navbar.Collapse className='justify-content-center .hidden-score'>
+          <Navbar.Collapse className='justify-content-start .hidden-score'>
             <Navbar.Text>{user ? `Your score: ${score}` : ''}</Navbar.Text>
           </Navbar.Collapse>
           <Navbar.Collapse className='justify-content-end .hidden-name'>
             <Navbar.Text>
-              {user
-                ? `Signed in as: <a href='#'>${user.login}</a>`
-                : 'Hello, anonymous!'}
+              {user ? `Signed in as: ${user.login}` : 'Hello, anonymous!'}
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>

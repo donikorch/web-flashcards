@@ -3,7 +3,7 @@ require('@babel/register');
 const express = require('express');
 const app = express();
 const path = require('path');
-const mainRoute = require('./routes/index.route');
+const indexRoute = require('./routes/index.route');
 
 // мидлвары
 app.use(express.urlencoded({ extended: true }));
@@ -13,7 +13,7 @@ const ssr = require('./middlewares/ssr');
 
 // роуты
 app.use(ssr);
-app.use('/', mainRoute)
+app.use('/', indexRoute);
 
 // листенер
 app.listen(3000, () => {

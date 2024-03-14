@@ -1,9 +1,9 @@
 const router = require('express').Router();
 
 // роуты
-const main = require('./views/main.route');
+const logReg = require('./views/logreg.route');
 
-router.use('/', main);
+router.use('/', logReg);
 
 router.get('/*', (req, res) => {
   res.json({ message: '404' });
