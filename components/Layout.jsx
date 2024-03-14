@@ -1,20 +1,16 @@
+const React = require('react');
+
 // стили
 import Container from 'react-bootstrap/Container';
-
-const React = require('react');
 
 // компоненты
 const Navigation = require('./ui/Navigation');
 
-module.exports = function Layout({ title, children }) {
+module.exports = function Layout({ title, children, user, score }) {
   return (
     <html lang='en'>
       <head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <link
-          rel='stylesheet'
-          href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'
-        />
         <link
           rel='stylesheet'
           href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css'
@@ -26,7 +22,7 @@ module.exports = function Layout({ title, children }) {
         <title>{title}</title>
       </head>
       <body>
-        <Navigation />
+        <Navigation user={user} score={score} />
         <Container>{children}</Container>
       </body>
     </html>
