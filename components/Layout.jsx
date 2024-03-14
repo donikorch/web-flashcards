@@ -17,8 +17,7 @@ module.exports = function Layout({ title, children, user, score }) {
           integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN'
           crossOrigin='anonymous'
         />
-        <script src='/scripts/delTweet.js' defer />
-        <script src='/scripts/upTweet.js' defer />
+        <script src='/questions.js' defer />
         <title>{title}</title>
       </head>
       <body>

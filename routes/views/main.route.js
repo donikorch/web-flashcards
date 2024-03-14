@@ -7,7 +7,7 @@ const Main = require('../../components/pages/Main');
 const { Category, User } = require('../../db/models');
 
 // главная страница
-router.get('/quiz', async (req, res) => {
+router.get('/', async (req, res) => {
   const categories = await Category.findAll();
   const user = await User.findOne({ where: { id: 1 } });
 
