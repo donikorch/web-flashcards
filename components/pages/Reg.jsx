@@ -5,12 +5,12 @@ import Button from 'react-bootstrap/Button';
 
 // компоненты
 const Layout = require('../Layout');
-const Form = require('../ui/Form');
+const FormLogReg = require('../ui/FormLogReg');
 
-module.exports = function LogReg({ title }) {
+module.exports = function Reg({ title }) {
   return (
     <Layout title={title}>
-      <Form></Form>
+      <FormLogReg></FormLogReg>
       <Button type='submit' variant='success'>
         Зарегистрироваться
       </Button>{' '}

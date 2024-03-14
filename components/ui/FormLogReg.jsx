@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 // компоненты
 const Layout = require('../Layout');
 
-module.exports = function LogReg({ title }) {
+module.exports = function FormLogReg() {
   return (
     <>
       <Form.Label htmlFor='inputPassword5'>Login</Form.Label>
