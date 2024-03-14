@@ -25,16 +25,12 @@
     "prettier": "3.2.5"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "gitignore": "^0.7.0",
-=======
     "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.23.3",
     "@babel/register": "^7.23.7",
     "express": "^4.18.3",
     "morgan": "^1.10.0",
->>>>>>> b8598c815b28e070b8b3b9f04edc4c5028b4c965
     "pg": "^8.11.3",
     "pg-hstore": "^2.3.4",
     "react": "^18.2.0",

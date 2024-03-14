@@ -1,12 +1,12 @@
+const React = require('react');
+
 // стили
 import Container from 'react-bootstrap/Container';
-
-const React = require('react');
 
 // компоненты
 const Navigation = require('./ui/Navigation');
 
-module.exports = function Layout({ title, children }) {
+module.exports = function Layout({ title, children, user, score }) {
   return (
     <html lang='en'>
       <head>
@@ -26,7 +26,7 @@ module.exports = function Layout({ title, children }) {
         <title>{title}</title>
       </head>
       <body>
-        <Navigation />
+        <Navigation user={user} score={score} />
         <Container>{children}</Container>
       </body>
     </html>
