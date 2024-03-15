@@ -23,4 +23,3 @@ module.exports = function LogReg({ title }) {
     </Layout>
   );
 };
-
