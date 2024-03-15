@@ -17,8 +17,8 @@ module.exports = function Layout({ title, children, user, score }) {
           integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN'
           crossOrigin='anonymous'
         />
-        <script src='/questions.js' defer />
-        <script src='/auth.js' defer />
+        <script src='/scripts/questions.js' defer />
+        <script src='/scripts/auth.js' defer />
         <title>{title}</title>
       </head>
       <body bg='secondary'>

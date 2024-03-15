@@ -15,7 +15,7 @@ if (button) {
       const data = await res.json();
       if (data.message === 'success') {
         document.querySelector('.card-title').textContent = data.question.name;
-        document.querySelector('.card-img-top').src = `/${data.question.img}`;
+        document.querySelector('.card-img-top').src = `${data.question.img}`;
       } else {
         window.location.assign('/quiz');
       }

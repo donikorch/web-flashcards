@@ -7,9 +7,15 @@ import Button from 'react-bootstrap/Button';
 module.exports = function CardCategory({ category }) {
   return (
     <>
-      <Card style={{ width: '24rem' }}>
+      <Card style={{ width: '30rem', height: '40rem' }}>
         <Card.Img variant='top' src={category.img} />
-        <Card.Body>
+        <Card.Body
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-end',
+          }}
+        >
           <Card.Title>{category.name}</Card.Title>
           <div className='card'>
             <Button

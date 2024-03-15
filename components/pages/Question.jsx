@@ -22,8 +22,18 @@ module.exports = function Question({ title, user, score, question }) {
           data-category={question.categoryId}
         >
           <Card style={{ width: '40rem', height: '40rem' }}>
-            <Card.Img variant='top' src={`/${question.img}`} />
-            <Card.Body>
+            <Card.Img
+              variant='top'
+              src={question.img}
+              style={{ height: '70%', objectFit: 'cover' }}
+            />
+            <Card.Body
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'flex-end',
+              }}
+            >
               <Card.Title>{question.name}</Card.Title>
               <div className='card'>
                 <InputGroup className='mb-2'>
