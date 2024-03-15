@@ -21,7 +21,7 @@ module.exports = function Layout({ title, children, user, score }) {
         <script src='/auth.js' defer />
         <title>{title}</title>
       </head>
-      <body>
+      <body bg='secondary'>
         <Navigation user={user} score={score} />
         <Container>{children}</Container>
       </body>
