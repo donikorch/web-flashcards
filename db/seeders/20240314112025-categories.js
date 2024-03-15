@@ -10,7 +10,7 @@ module.exports = {
       [
         {
           name: "1 Категория",
-          img: "какое-то изображение",
+          img: "https://i.pinimg.com/236x/2a/f5/3d/2af53d8f1be483dd0e05b7b18142c33c.jpg",
           Questions: [
             {
               name: "1 вопрос?",
