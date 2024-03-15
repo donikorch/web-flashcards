@@ -28,27 +28,46 @@ router.get('/:id', async (req, res) => {
 // следующий вопрос
 router.get('/:id/next', async (req, res) => {
   const { id } = req.params;
+  res.app.locals.questionId += 1;
 
   try {
-    const currentQuestion = await Question.findOne({
-      where: { id: res.app.locals.questionId },
-    });
-
-    res.app.locals.questionId += 1;
     const nextQuestion = await Question.findOne({
       where: {
         categoryId: id,
-        id: {
-          [Op.gt]: res.app.locals.questionId,
-        },
+        id: res.app.locals.questionId,
       },
       order: [['id', 'ASC']],
     });
 
-    console.log(nextQuestion);
-
     if (nextQuestion) {
-      res.json({ message: 'success', question: nextQuestion });
+      res.json({
+        message: 'success',
+        questions: { currentQuestion, nextQuestion },
+      });
+    } else {
+      res.json({ message: 'No more questions in this category' });
+    }
+  } catch (error) {
+    res.json({ message: 'error', error });
+  }
+});
+
+// проверка ответа
+router.post('/:id/check', async (req, res) => {
+  const { id } = req.params;
+  const { answer } = req.body;
+
+  try {
+    const currentQuestion = await Question.findOne({
+      where: {
+        categoryId: id,
+        id: res.app.locals.questionId,
+      },
+      order: [['id', 'ASC']],
+    });
+
+    if (currentQuestion && currentQuestion.answer === answer) {
+      res.json({ message: 'success', data: { currentQuestion, answer } });
     } else {
       res.json({ message: 'No more questions in this category' });
     }
