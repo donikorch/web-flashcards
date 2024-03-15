@@ -8,45 +8,65 @@ module.exports = {
     await Category.bulkCreate(
       [
         {
-          name: '1 Категория',
-          img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fpikabu.ru%2Fstory%2Fkartinka_gipnoz_3971961&psig=AOvVaw1jDqH9Zgv9c2FpkTe8GGru&ust=1710511250301000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJjz0Y7184QDFQAAAAAdAAAAABAI',
+          name: "Сплетни Эльбруса",
+          img: "/img/категория1.jpg",
           Questions: [
             {
-              name: '1 вопрос?',
-              answer: '1 ответ',
-              img: 'Изображение 1',
+              name: "Кто имеет связь One-to-many с Катей и Даней?",
+              answer: "Костя",
+              img: "/img/1categ/Даня.jpg",
             },
             {
-              name: '2 вопрос?',
-              answer: '2 ответ',
-              img: 'Изображение 2',
+              name: "Что сказал HyperX когда захотел других отношений с Никитой(имя изменено)?",
+              answer: "Френдзона!",
+              img: "/img/1categ/hyperX.webp",
             },
             {
-              name: '3 вопрос?',
-              answer: '3 ответ',
-              img: 'Изображение 3',
+              name: "Как Decoy объяснил это девушке Никиты?",
+              answer: "Сори, но твой бойчик больше не твой бойчик",
+              img: "/img/тикай.jpeg",
             },
+            {
+              name: "Как Чингизхан(имя изменено) ласково называет свою любовь?",
+              answer: "Надежда Николаевна",
+              img: "/img/1categ/Чингизхан.jpg",
+            },
+            {
+              name: "Что отваливается, когда много форкаешь??",
+              answer: "Интернет в Эльбрусе",
+              img: "/img/1categ/интернет.jpg",
+            }
           ],
         },
         {
-          name: '2 Категория',
-          img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fdeti-online.com%2Fprintables%2Fdlya-samyh-malenkih%2Fkartinki-dlya-detey-na-steny%2Fcyplenok%2F&psig=AOvVaw1jDqH9Zgv9c2FpkTe8GGru&ust=1710511250301000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJjz0Y7184QDFQAAAAAdAAAAABAR',
+          name: "Гачимучи имена",
+          img: "/img/2categ/0.Cat.jpg",
           Questions: [
             {
-              name: '1 вопрос?',
-              answer: '1 ответ',
-              img: 'Изображение 1',
+              name: "Скажите как его зовут!",
+              answer: "ЕвгGaYний",
+              img: "/img/2categ/1Evgen.png",
             },
             {
-              name: '2 вопрос?',
-              answer: '2 ответ',
-              img: 'Изображение 2',
+              name: "Скажите как его зовут!",
+              answer: "ДИМASS",
+              img: "/img/2categ/Dimass.png",
             },
             {
-              name: '3 вопрос?',
-              answer: '3 ответ',
-              img: 'Изображение 3',
+              name: "Скажите как его зовут!",
+              answer: "Semen",
+              img: "/img/2categ/Semen.png",
             },
+            {
+              name: "Скажите как его зовут!",
+              answer: "GayOrgy",
+              img: "/img/2categ/3Gay.png",
+            },
+            {
+              name: "Скажите как его зовут!",
+              answer: "ВладAssLove",
+              img: "/img/2categ/2Vlad.png",
+            }
           ],
         },
       ],
