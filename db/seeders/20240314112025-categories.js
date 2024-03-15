@@ -36,7 +36,7 @@ module.exports = {
               name: "Что отваливается, когда много форкаешь??",
               answer: "Интернет в Эльбрусе",
               img: "/img/1categ/интернет.jpg",
-            },
+            }
           ],
         },
         {
@@ -67,7 +67,7 @@ module.exports = {
               name: "Скажите как его зовут!",
               answer: "ВладAssLove",
               img: "/img/2categ/2Vlad.png",
-            },
+            }
           ],
         },
       ],
