@@ -4,9 +4,6 @@ const router = require('express').Router();
 const LogReg = require('../../components/pages/LogReg');
 const Reg = require('../../components/pages/Reg');
 
-// модели
-const { User } = require('../../db/models');
-
 // страница логина
 router.get('/', async (req, res) => {
   const logReg = res.renderComponent(LogReg, {

@@ -4,18 +4,19 @@ const router = require('express').Router();
 const Main = require('../../components/pages/Main');
 
 // модели
-const { Category, User } = require('../../db/models');
+const { Category } = require('../../db/models');
 
 // главная страница
 router.get('/', async (req, res) => {
   const categories = await Category.findAll();
-  const user = await User.findOne({ where: { id: 1 } });
+  const user = res.app.locals.user;
+  res.app.locals.score = 0;
 
   const main = res.renderComponent(Main, {
     title: 'Quiz',
     categories,
     user,
-    score: 100,
+    score: res.app.locals.score,
   });
 
   res.send(main);

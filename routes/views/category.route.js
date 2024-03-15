@@ -42,10 +42,12 @@ router.get('/:id/next', async (req, res) => {
     if (nextQuestion) {
       res.json({
         message: 'success',
-        questions: { currentQuestion, nextQuestion },
+        question: nextQuestion,
       });
     } else {
-      res.json({ message: 'No more questions in this category' });
+      res.json({
+        message: 'not success',
+      });
     }
   } catch (error) {
     res.json({ message: 'error', error });
@@ -55,7 +57,8 @@ router.get('/:id/next', async (req, res) => {
 // проверка ответа
 router.post('/:id/check', async (req, res) => {
   const { id } = req.params;
-  const { answer } = req.body;
+  const { answer, score } = req.body;
+  res.app.locals.score = Number(score);
 
   try {
     const currentQuestion = await Question.findOne({
@@ -67,9 +70,17 @@ router.post('/:id/check', async (req, res) => {
     });
 
     if (currentQuestion && currentQuestion.answer === answer) {
-      res.json({ message: 'success', data: { currentQuestion, answer } });
+      res.app.locals.score += 100;
+      res.json({
+        message: 'success',
+        result: { currentQuestion, answer, score: res.app.locals.score },
+      });
     } else {
-      res.json({ message: 'No more questions in this category' });
+      res.app.locals.score -= 50;
+      res.json({
+        message: 'no success',
+        result: { currentQuestion, answer, score: res.app.locals.score },
+      });
     }
   } catch (error) {
     res.json({ message: 'error', error });
