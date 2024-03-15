@@ -9,7 +9,6 @@ router.post('/registration', async (req, res) => {
     if (user) {
       res.app.locals.user = user;
       res.json({ message: 'Отлично' });
-      // res.redirect("/");
     } else res.status(400).json({ error: 'Не все поля заполнены' });
   } catch ({ message }) {
     res.status(500).json({ error: message });
