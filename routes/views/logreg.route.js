@@ -4,8 +4,6 @@ const router = require('express').Router();
 const LogReg = require('../../components/pages/LogReg');
 const Reg = require('../../components/pages/Reg');
 
-
-
 // страница логина
 router.get('/', async (req, res) => {
   const logReg = res.renderComponent(LogReg, {
@@ -23,7 +21,5 @@ router.get('/registration', async (req, res) => {
 
   res.send(logReg);
 });
-
-
 
 module.exports = router;

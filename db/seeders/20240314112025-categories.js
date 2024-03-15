@@ -1,7 +1,6 @@
-"use strict";
-const { Category, Question } = require("../models");
-const path = require("path");
-
+'use strict';
+const { Category, Question } = require('../models');
+const path = require('path');
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -73,7 +72,7 @@ module.exports = {
       ],
       {
         include: [Question],
-      }
+      },
     );
   },
 

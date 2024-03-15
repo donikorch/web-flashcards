@@ -5,18 +5,18 @@ import Button from 'react-bootstrap/Button';
 
 // компоненты
 const Layout = require('../Layout');
+const FormReg = require('../ui/FormReg');
 
 module.exports = function Reg({ title }) {
   return (
     <Layout title={title}>
-        <form className='sign-in'>
-          <input type="text" name="login" placeholder="Name" required />
-          <input type="password" name="password" placeholder="password" required />
-          <input type="email" name="email" placeholder="email" required/>
-          <Button type='submit' variant='success'>
-          Зарегистрироваться
+      <form className='sign-in'>
+        <FormReg>
+          <Button type='submit' className='mb-2' variant='success'>
+            Зарегистрироваться
           </Button>{' '}
-        </form>
+        </FormReg>
+      </form>
     </Layout>
   );
 };
